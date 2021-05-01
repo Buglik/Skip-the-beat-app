@@ -74,50 +74,46 @@ export default class CreateRoomPage extends Component {
               <FormControlLabel
                 value="true"
                 control={<Radio color="primary" />}
-                label="True"
+                label="Yes"
                 labelPlacement="bottom"
               />
               <FormControlLabel
                 value="false"
                 control={<Radio color="secondary" />}
-                label="False"
+                label="No"
                 labelPlacement="bottom"
               />
             </RadioGroup>
           </FormControl>
-          <Grid item xs={12} align="center">
-            <FormControl>
-              <TextField
-                required={true}
-                type="number"
-                onChange={this.handleVotesChange}
-                defaultValue={this.defaultVotes}
-                inputProps={{ min: 1, style: { textAlign: "center" } }}
-              />
-              <FormHelperText>
-                <div align="center">Votes required to skip</div>
-              </FormHelperText>
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} align="center">
-            <Button
-              color="primary"
-              variant="contained"
-              onClick={this.handleRoomButtonPressed}
-            >
-              Create a room
-            </Button>
-          </Grid>
-          <Grid item xs={12} align="center">
-            <Button
-              color="secondary"
-              variant="contained"
-              to="/"
-              component={Link}
-            >
-              Cancel
-            </Button>
-          </Grid>
+        </Grid>
+        <Grid item xs={12} align="center">
+          <FormControl>
+            <TextField
+              required={true}
+              type="number"
+              onChange={this.handleVotesChange}
+              defaultValue={this.defaultVotes}
+              inputProps={{ min: 1, style: { textAlign: "center" } }}
+            />
+            <FormHelperText>
+              <div align="center">Votes required to skip</div>
+            </FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid item xs={12} align="center">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={this.handleRoomButtonPressed}
+          >
+            Create a room
+          </Button>
+        </Grid>
+
+        <Grid item xs={12} align="center">
+          <Button variant="contained" color="secondary" to="/" component={Link}>
+            Cancel
+          </Button>
         </Grid>
       </Grid>
     );
