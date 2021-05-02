@@ -37,7 +37,7 @@ export default class HomePage extends Component {
       <Grid container spacing={3}>
         <Grid item xs={12} align="center">
           <Typography variant="h3" compact="h3">
-            Who's a DJ?
+            Skip the beat!
           </Typography>
         </Grid>
         <Grid item xs={12} align="center">
@@ -49,6 +49,11 @@ export default class HomePage extends Component {
               Create a Room
             </Button>
           </ButtonGroup>
+        </Grid>
+        <Grid item xs={12} align="center">
+          <Typography variant="subtitle1">
+            Create your own room and end "can we skip this song" problem!
+          </Typography>
         </Grid>
       </Grid>
     );
